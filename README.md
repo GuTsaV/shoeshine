@@ -1,7 +1,7 @@
 # Shoeshine
 A site with guides about shoeshining using the static site generator Jekyll.
 
-## Setup and build
+## Setup
 * `gem install bundler jekyll`
 * `bundle exec jekyll serve`
 
