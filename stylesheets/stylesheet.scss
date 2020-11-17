@@ -1,0 +1,230 @@
+---
+---
+
+@import 'reset';
+
+/* Colors */
+$background-grey: #f2f2f2;
+$box-grey:        #333333;
+$white:           #ffffff;
+$light-grey:      #969696;
+$middle-grey:     #606060;
+$dark-grey:       #424242;
+$nearly-black:    #282828;
+
+body {
+  background-color: $background-grey;
+}
+
+/* Layout */
+#wrapper {
+  margin-top: 6.7rem;
+  margin-right: 1.2rem;
+}
+/* Header */
+header {
+  width: 100%;
+  height: 5.5rem;
+  background-color: $box-grey;
+  margin-bottom: 0;
+  position: fixed;
+  top: 0; left: 0; z-index: 99;
+}
+div {
+  border: 1px none hotpink;
+}
+.mencontainer {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+}
+.logo-div {
+  h1 {
+    margin: 1.5rem 2rem 0 1rem;
+  }
+}
+.menu-div {
+  margin-top: 0.5rem;
+
+  h2 {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+  h3 {
+    display: inline-block;
+    margin: 0 0.5rem;
+    border-bottom: 1px solid $white;
+    &:hover {
+      border-bottom: 1px solid $light-grey;;
+    }
+  }
+}
+.fleuron {display: inline-block; font-size: 5rem; margin-left: 1rem; color: $white;}
+.divider-pipe {display: inline-block; font-size: 1.8rem; color: $light-grey;}
+
+/* Frontside */
+.front {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  margin: 0 0 1.2rem 1.2rem;
+  position: relative;
+  flex: 1 0 25rem;
+  max-width: 600px;
+}
+.frontpic {
+  background-color: $box-grey;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: all 150ms ease-out;
+}
+.frontpic:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  transition: all 150ms ease-in;
+}
+.frontext {
+  box-sizing: border-box;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  background-color: $box-grey;
+  color: $white;
+}
+.frontpic img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Instruction page*/
+.tutorial {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.step {
+  background-color: $box-grey;
+  flex: 1 0 700px;
+  margin: 0 0 1.2rem 1.2rem;
+  display: flex;
+  max-width: 1000px;
+}
+.blank { visibility: hidden; }
+.image-container {
+  flex: 1;
+}
+.step img {
+  width: 100%;
+  margin-bottom: -0.5%;
+}
+
+@media only screen and (max-device-width: 650px) {
+  header {
+    display: none;
+  }
+  #wrapper {
+    margin-top: 1.2rem;
+    margin-right: 0;
+  }
+  .front {
+    display: inline;
+    flex: none;
+  }
+  .box {
+    margin-left: 0;
+  }
+  .step {
+    width: 100%;
+    margin: 0.6rem 0;
+    display: inline;
+    flex: none;
+  }
+}
+
+/* Typgraphy */
+/* General */
+p, li, figcaption {font-family: 'Open Sans', sans-serif; color: $nearly-black;}
+li {display: inline-block; margin-right: 1rem;}
+li:before {content: '●  ';}
+ul {margin-top: 0.8rem;}
+
+/* Headers */
+h1, h2, h3 {font-family: 'Open Sans', sans-serif; text-align: left; }
+h1 {font-size: 22pt; display: block; width: 100%;}
+h2 {font-size: 16pt;}
+h3 {font-size: 12pt;}
+header {
+  h1, h2, h3 {
+    color: $white;
+    text-align: left;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+  a {text-decoration: none; }
+  h1 {font-family: 'Satisfy', cursive; font-size: 30pt; line-height: 28pt; }
+  h2 {font-size: 24pt; }
+  h3 {font-size: 1.5rem; }
+}
+
+/* Links */
+a {color: inherit; text-decoration: underline;}
+a:visited {color: inherit;}
+a:hover {color: $light-grey;}
+
+.frontext {
+  h1 {
+    font-size: 3rem;
+    color: $white;
+    text-align: center;
+    display: block;
+  }
+  .text_small {
+    font-size: 1.1rem;
+    text-align: center;
+    display: block;
+    color: inherit;
+  }
+  .description {
+    margin-top: 1rem;
+    color: inherit;
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: $background-grey;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,.6);
+  font-size: 2rem;
+  padding: 0.75em 0.5em;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Instructions */
+.step-number {
+  color: $light-grey;
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+}
+.step p {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: $white;
+  text-align: justify;
+}
+.step p:last-child:after {content: '\00a0❦';}
+.step h1 {margin-top: 0rem; color: $light-grey;}
+.instructions {padding: 0.5rem 1rem 0.5rem 0.5rem; flex: 1;}
+.step li {color: $white;}
+
