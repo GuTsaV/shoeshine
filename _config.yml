@@ -18,7 +18,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - firebase.json
-  - database.rules.json
   - README.md
-  - favicon.psd
-  - wip/
